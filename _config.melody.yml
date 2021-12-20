@@ -1,0 +1,10 @@
+menu:
+  Home: /
+  Tags: /tags
+  Categories: /categories
+
+auto_excerpt:
+  enable: true
+  length: 150
+
+top_img: false
