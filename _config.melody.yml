@@ -74,3 +74,6 @@ busuanzi:
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
+
+wordcount:
+  enable: true
