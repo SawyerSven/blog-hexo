@@ -3,13 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: Neverland
+subtitle: '道生一，一生二，二生三，三生万物'
 description: ''
 keywords:
-author: John Doe
+  - 前端
+  - frontend
+  - javascript
+  - css
+author: Siyuan
 language: zh-Hans
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -90,8 +94,8 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
+include: 
+exclude: 
 ignore:
 
 # Extensions

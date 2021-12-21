@@ -3,8 +3,74 @@ menu:
   Tags: /tags
   Categories: /categories
 
-auto_excerpt:
+auX_excerpt:
   enable: true
   length: 150
 
-top_img: false
+top_img: http://47.95.214.156:3001/uploads/medium/fcec6883177323ae1bf9a3dae581059f.jpg
+top_img_height: 60
+
+# 文章相关配置
+post_meta:
+  date_type: created # or updated 文件日期是创建日还是更新日
+  categories: true # 是否显示分类
+  tags: true # 是否显示标签
+
+# 版权
+post_copyright:
+  enable: true
+  license: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/ # 协议说明地址
+
+# adv
+adv:
+  enable: false
+  info:
+
+# 侧边栏
+slidebar_display: index
+# all: 所有的页面都会自动展示侧边栏
+# index: 只有首页会自动展示侧边栏
+# post: 只有文章页会自动展示侧边栏
+# index-none: 只有首页不会自动展示侧边栏
+# post-none: 只有文章页不会自动展示侧边栏
+# hidden: 所有的页面都不会自动展示侧边栏
+
+# 头像
+avatar: http://47.95.214.156:3001/uploads/medium/1081ccc0f270fb058ae48545b1b6f4eb.jpg
+# follow me
+follow:
+  enable: true
+  url: https://github.com/sawyersven
+  text: "Follo Me"
+
+toc:
+  enable: true
+  number: true
+
+since: 2019
+
+# 页脚自定义
+footer_custom_text: hitokoto
+
+# disqus
+disqus:
+  enable: true
+  shortname: blog-gb2jzpokgw
+  count: true
+
+# busuanzi count for PV / UV in site
+busuanzi:
+  enable: true
+  # 全站uv
+  site_uv: true
+  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_footer:
+  # 全站pv
+  site_pv: true
+  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_footer:
+  # 单独页面pv
+  page_pv: true
+  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_footer:
