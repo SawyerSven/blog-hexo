@@ -7,6 +7,6 @@ services:
       dockerfile: ./ci/Dockerfile
     environment:
       - TZ=Asia/Shanghai
-    container_name: official-developer-docs
+    container_name: hexo-blog
     ports:
-      - '8080:80'
+      - '80:80'
