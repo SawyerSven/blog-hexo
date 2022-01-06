@@ -1,11 +1,12 @@
 menu:
   Home: /
   Tags: /tags
+  Archives: /archives
   Categories: /categories
 
-auX_excerpt:
+auto_excerpt:
   enable: true
-  length: 150
+  length: 100
 
 top_img: http://47.95.214.156:3001/uploads/medium/fcec6883177323ae1bf9a3dae581059f.jpg
 top_img_height: 60
