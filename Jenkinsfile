@@ -20,19 +20,19 @@ pipeline{
           }
         }
       }
-      stage("下载依赖"){
+    }
+    stage("下载依赖"){
         steps{
           echo "开始下载依赖"
           sh "yarn install"
         }
-      }
+    }
 
-      stage("打包"){
+    stage("打包"){
         steps{
           echo "开始打包"
           sh "yarn clean & yarn build"
         }
-      }
     }
   }
 }
