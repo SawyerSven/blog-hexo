@@ -11,7 +11,7 @@ pipeline{
       steps{
         echo "Git仓库代码: ${GIT_REPO}"
         script {
-          if (fileExists file: "${CONFIG_FILE}"){
+          if (fileExists (file: "${CONFIG_FILE}")){
             echo "项目已存在 准备更新代码"
             sh "git pull origin master"
           }else{
