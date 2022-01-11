@@ -7,30 +7,30 @@ pipeline{
   }
 
   stages{
-    stage("获取更新代码"){
+    stage("update source code"){
       steps{
-        echo "Git仓库代码: ${GIT_REPO}"
+        echo "Git repo: ${GIT_REPO}"
         script {
           if (fileExists (file: "${CONFIG_FILE}")){
-            echo "项目已存在 准备更新代码"
+            echo "project existed, will pull remote respository"
             sh "git pull origin master"
           }else{
-            echo "项目不存在，准备拉取代码"
+            echo "project not exist, will clone respository"
             git "${GIT_REPO}"
           }
         }
       }
     }
-    stage("下载依赖"){
+    stage("Download dependency"){
         steps{
-          echo "开始下载依赖"
+          echo "downloading dependency"
           sh "yarn install"
         }
     }
 
-    stage("打包"){
+    stage("Build"){
         steps{
-          echo "开始打包"
+          echo "Building start"
           sh "yarn clean & yarn build"
         }
     }
