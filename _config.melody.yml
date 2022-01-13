@@ -1,8 +1,8 @@
 menu:
-  Home: /
-  Tags: /tags
-  Archives: /archives
-  Categories: /categories
+  主页: /
+  标签: /tags
+  归档: /archives
+  分类: /categories
 
 auto_excerpt:
   enable: true
