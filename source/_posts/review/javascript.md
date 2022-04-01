@@ -1,7 +1,12 @@
 ---
 title: 2022春季复习之Javascript
 date: 2022-03-14 14:57:12
-tags:
+tags: 
+  - 复习
+  - javascript
+  - 手写代码
+categories:
+  - javascript
 ---
 
 

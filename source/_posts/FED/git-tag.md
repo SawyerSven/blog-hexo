@@ -1,10 +1,11 @@
 ---
 title: 半自动化维护Git Tag和package.json的版本号
 categories: 
-  - Javascript
+  - javascript
 tags: 
   - CI/CD
   - 常用脚本
+
 ---
 
 项目的静态资源使用CDN加速，在Jenkins中，`build`完成后会自动执行OSS上传的脚本，为了避免多分支/多版本的静态资源互相影响，项目组在每次需要发布版本的时候需要更新package.json的版本号，并且静态资源根据版本号作为路径区分，避免不同版本的静态资源冲突。

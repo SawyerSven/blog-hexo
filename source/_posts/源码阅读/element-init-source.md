@@ -1,7 +1,10 @@
 ---
 title: Element-UI初始化组件源码
 date: 2022-02-11 11:14:04
-tags:
+tags: 
+  - javascript
+categories:
+  - javascript
 ---
 ## 环境记录
 
