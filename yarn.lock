@@ -1308,10 +1308,10 @@ hexo-theme-landscape@^0.0.3:
   resolved "https://registry.nlark.com/hexo-theme-landscape/download/hexo-theme-landscape-0.0.3.tgz#87d1f4d613da9be5245dad0d4b80479eab70d386"
   integrity sha1-h9H01hPam+UkXa0NS4BHnqtw04Y=
 
-hexo-theme-melody@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.nlark.com/hexo-theme-melody/download/hexo-theme-melody-1.9.0.tgz#02d62bb144f526e729436a01d8e794c894e2cb51"
-  integrity sha1-AtYrsUT1JucpQ2oB2OeUyJTiy1E=
+hexo-theme-melody@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/hexo-theme-melody/-/hexo-theme-melody-1.9.1.tgz#0d32db7e51efc7d6d51be23e8f49a30fd260386c"
+  integrity sha512-YR7sdWgIOJIsxu3Vt3mjepqc3+c2xPKu5qhZA1rHTU07H8ejGTsLpYNnwxhyQA6jpxErHGSpFG+4B8ltTXQoXw==
 
 hexo-util@^2.0.0, hexo-util@^2.1.0, hexo-util@^2.4.0, hexo-util@^2.5.0:
   version "2.5.0"
