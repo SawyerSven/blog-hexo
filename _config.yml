@@ -107,6 +107,4 @@ theme: melody
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: 'https://github.com/SawyerSven/SawyerSven.github.io'
-  branch: 'gh-pages'
-  token: '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'
+  repo: 'git@github.com:SawyerSven/sawyersven.github.io.git'
