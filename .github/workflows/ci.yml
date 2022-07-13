@@ -1,17 +1,53 @@
-name: GitHub Actions Demo
-on: [push]
+name: Hexo Blog CI
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - name: Checkout Respository master branch
+        uses: actions/checkout@master
+
+      - name: Setup Node.js 14.x
+        uses: actions/setup-node@master
+        with:
+          node-version: '14.17.3'
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{runner.os}}-node-
+
+      - name: Setup Hexo Dependencies
         run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          npm install hexo-cli -g
+          npm install
+
+      - name: Setup Deploy Private Key
+        env:
+          HEXO_DEPLOY_PRIVATE_KEY: ${{secrets.HEXO_DEPLOY_PRI}}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/know_hosts
+
+      - name: Setup Git Infomation
+        run: |
+          git config --global user.name "sawyersven"
+          git config --global user.email "kormondor@gmail.com"
+
+      - name: Deploy Hexo
+        run: |
+          hexo clean
+          hexo generate
+          hexo deploy
