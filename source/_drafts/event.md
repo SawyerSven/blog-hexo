@@ -9,7 +9,6 @@ tags:
   - 事件
 ---
 
-# 浏览器DOM之Event
 
 > DOM即Document Object Model(文档对象模型)
 
