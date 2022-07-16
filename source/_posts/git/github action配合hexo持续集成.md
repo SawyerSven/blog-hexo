@@ -1,10 +1,5 @@
 ---
 title: github action配合hexo持续集成博客
-gategories:
-    - Github
-tags: 
-    - Github
-    - CI/CD
 ---
 
 # Github Action配合Hexo持续集成博客
@@ -240,7 +235,7 @@ ssh-keyscan github.com >> ~/.ssh/know_hosts
 
 ### 将Gitpage解析到自己的域名
 
-在购买域名的服务商中添加新的www解析，解析值填为:xxx.github.io (你的gitpage的访问地址)
+在购买域名的服务商中添加新的CNAME解析，解析值填为:xxx.github.io (你的gitpage的访问地址)
 
 进入gitpage的仓库,并点击settings
 
@@ -250,3 +245,18 @@ ssh-keyscan github.com >> ~/.ssh/know_hosts
 
 这个时候访问你解析的地址，就可以看到你的Github Page被解析过去了。
 
+### CNAME文件
+
+发现每次提交以后设置的Customer domain会被清除掉
+
+所以使用CNAME文件维护
+
+在hexo-blog的source文件夹下创建一个CNAM的文件,内容如下：
+
+```bash
+
+blog.sawyersven.xyz  # 只有一行代码，就是你要解析的自定义域名
+
+```
+
+然后每次deploy后就不用手动调整custom domain了
