@@ -160,7 +160,7 @@ echo Hello world > hello.md
 
 同样的新建一个github的同名repo
 
-![image-20220718225257292](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220718225257292.png)
+![image-20220718225257292](https://s2.loli.net/2022/07/19/ScgXO85A7tDuxrW.png)
 
 将内容push到远端，这部分代码跟上边一样，就不赘述了。
 
@@ -212,7 +212,7 @@ git submodule add git@github.com:xxx/_posts.git  # 这里的分支就是我们�
 
 我们自动化工作流程应当如下：
 
-![未命名白板 (4)](C:/Users/Administrator/Downloads/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%99%BD%E6%9D%BF%20(4).jpg)
+![未命名白板 (4)](https://s2.loli.net/2022/07/19/jNLYHIa2KPwc3gD.png)
 
 按照上边的流程图，我们大致分解为五步：
 
@@ -287,13 +287,13 @@ access token是我们调用`Github Api`的令牌，有了它我们才可以通�
 
 我们首先在[这里](https://github.com/settings/tokens)，选择`Generate new token`
 
-![image-20220719000606312](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719000606312.png)
+![image-20220719000606312](https://s2.loli.net/2022/07/19/ijT5oxDR3Ll7abu.png)
 
 在打开的新界面中，输入一个**自己方便区分**的名字,然后勾选workflow的权限即可
 
 因为这个token只有我们在workflow中使用，不会用到其他地方，过期时间选择`No expiration`即可。
 
-![image-20220719000827786](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719000827786.png)
+![image-20220719000827786](https://s2.loli.net/2022/07/19/tcekHnETCLxYD9U.png)
 
 > 生成成功以后马上复制生成的token，如果忘了没复制刷新过页面后就再也看不到了，这个时候就只能删掉这个token再重新新建一个token了
 
@@ -301,9 +301,9 @@ access token是我们调用`Github Api`的令牌，有了它我们才可以通�
 
 进入_post的仓库，选择`settings`，然后选择 `Security`-`Actions`-`New repository secret`
 
-![image-20220719001237927](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719001237927.png)
+![image-20220719001237927](https://s2.loli.net/2022/07/19/cERgW7wOJS6TtkV.png)
 
-![image-20220719001257429](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719001257429.png)
+![image-20220719001257429](https://s2.loli.net/2022/07/19/i8WHEAsb4gMOdl7.png)
 
 Name中填GIT_TOKEN (这个就是我们在workflow文件中定义的secret.GIT_TOKEN)
 
@@ -399,11 +399,11 @@ jobs:
 
 将生成的`公钥`(带pub的那个)复制到[这里](https://github.com/settings/ssh/new)，Title依旧起一个方便自己区分的即可
 
-![image-20220719004416249](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719004416249.png)
+![image-20220719004416249](https://s2.loli.net/2022/07/19/sSJYUboiahPfLRZ.png)
 
 将`私钥`(不带pub的那个) 粘贴到`note-hexo`的`secrets`-`actions`里:
 
-![image-20220719004707829](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719004707829.png)
+![image-20220719004707829](https://s2.loli.net/2022/07/19/GP5hbx9e4OTZBsL.png)
 
 :tada: Congratulations, 你已经完成了本文的70%内容，现在先放下要继续写代码的心情，来看看我们目前的进展吧
 
@@ -415,15 +415,15 @@ jobs:
 
 然后我们打开github的_posts仓库，点击`actions`，应该会看到一条新的workflow,类似下图：
 
-![image-20220719005535054](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719005535054.png)
+![image-20220719005535054](https://s2.loli.net/2022/07/19/s48uMlT5oRCkc1L.png)
 
 当这调workflow执行完毕后，我们去`note-hexo`中查看`actions`:
 
-![image-20220719005649309](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719005649309.png)
+![image-20220719005649309](https://s2.loli.net/2022/07/19/osrLMxAnHX2gORT.png)
 
 会看到有workflow也在执行，等到这条workflow执行完毕后，查看`note-hexo`的分支，会发现多了一个gh-pages分支，里面就是打包后的Hexo静态资源
 
-![image-20220719005931507](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220719005931507.png)
+![image-20220719005931507](https://s2.loli.net/2022/07/19/HbTOqM6NpxtKiVa.png)
 
 ## Congratulations
 
