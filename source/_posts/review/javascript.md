@@ -6,7 +6,6 @@ tags:
   - javascript
   - 手写代码
 categories:
-top: True
   - javascript
 ---
 
