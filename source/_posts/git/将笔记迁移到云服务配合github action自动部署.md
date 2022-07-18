@@ -127,7 +127,7 @@ yarn install
 
 然后我们将_posts文件夹直接删掉，新建一个github的同名repo
 
-![image-20220718224632170](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20220718224632170.png)
+![image-20220718224632170](https://s2.loli.net/2022/07/19/b42osIhuMZa9PAL.png)
 
 因为我们的笔记不打算公开，所以repo可以选择Private.
 
