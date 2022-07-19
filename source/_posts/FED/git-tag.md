@@ -1,5 +1,6 @@
 ---
 title: 半自动化维护Git Tag和package.json的版本号
+date: 2022-07-16
 categories: 
   - javascript
 tags: 
