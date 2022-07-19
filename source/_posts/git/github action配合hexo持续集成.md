@@ -1,5 +1,6 @@
 ---
 title: github action配合hexo持续集成博客
+date: 2022-07-18
 ---
 
 # Github Action配合Hexo持续集成博客
